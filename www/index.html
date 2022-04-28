@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/angular-chart.css">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+        <link href="css/ionic.app.css" rel="stylesheet">
+        -->
+
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+
+  <!-- your app's js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-chart.js/1.0.2/angular-chart.min.js"></script>
+  <script src="js/app.js"></script>
+
+</head>
+
+<body ng-app="starter">
+  <ion-pane>
+    <ion-header-bar class="bar-stable">
+      <h1 class="title">Ionic Blank Starter</h1>
+    </ion-header-bar>
+    <ion-content ng-controller="ExampleController">
+
+
+      <div class="card">
+        <div class="item item-divider">
+          A Line Chart
+        </div>
+        <div class="item item-text-wrap">
+          <!-- <canvas id="line" class="chart chart-line" data="data" labels="labels" legend="true" series="series"
+            options="{showTooltips: false}"></canvas> -->
+          <canvas id="line" class="chart chart-line" chart-data="LineData" chart-labels="LineLabels"
+            chart-series="LineSeries" chart-options="LineOptions" chart-dataset-override="LineDatasetOverride">
+          </canvas>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="item item-divider">
+          A Bar Chart
+        </div>
+        <div class="item item-text-wrap">
+          <!-- <canvas id="bar" class="chart chart-bar" data="data" labels="labels" legend="true" series="series"
+            options="{showTooltips: false}"></canvas> -->
+          <canvas id="bar" class="chart chart-bar" chart-data="Bardata" chart-labels="Barlabels" chart-series="Barseries"></canvas>
+        </div>
+      </div>
+
+
+
+      <div class="card">
+        <div class="item item-divider">
+          A Doughnut Chart
+        </div>
+        <div class="item item-text-wrap">
+          <canvas id="doughnut" class="chart chart-doughnut" chart-data="doughnutData" chart-labels="doughnutLabels">
+          </canvas>
+        </div>
+      </div>
+
+
+
+      <div class="card">
+        <div class="item item-divider">
+          A Radar Chart
+        </div>
+        <div class="item item-text-wrap">
+          <canvas id="radar" class="chart chart-radar" chart-data="radarData" chart-labels="radarLabels">
+          </canvas>
+        </div>
+      </div>
+
+
+
+      <div class="card">
+        <div class="item item-divider">
+          A Pie Chart
+        </div>
+        <div class="item item-text-wrap">
+          <canvas id="pie" class="chart chart-pie" chart-data="pieData" chart-labels="pieLabels">
+          </canvas>
+        </div>
+      </div>
+
+
+
+      <div class="card">
+        <div class="item item-divider">
+          A Polar Area Chart
+        </div>
+        <div class="item item-text-wrap">
+          <canvas id="polar-area" class="chart chart-polar-area" chart-data="polarAreaData"
+            chart-labels="polarAreaLabels">
+          </canvas>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <div class="item item-divider">
+          Horizontal Bar Chart
+        </div>
+        <div class="item item-text-wrap">
+          <canvas id="base" class="chart-horizontal-bar" chart-data="HorizontalBarData"
+            chart-labels="HorizontalBarLabels" chart-series="HorizontalBarSeries">
+          </canvas>
+        </div>
+      </div>
+
+
+
+      <div class="card">
+        <div class="item item-divider">
+          Bubble Chart
+        </div>
+        <div class="item item-text-wrap">
+          <canvas id="base" class="chart-bubble" chart-data="BubbleData" chart-series="BubbleSeries">
+          </canvas>
+        </div>
+      </div>
+
+
+
+      <div class="card">
+        <div class="item item-divider">
+          Dynamic Chart
+        </div>
+        <div class="item item-text-wrap">
+          <canvas id="base" class="chart-base" chart-type="DynamicType" chart-data="DynamicData"
+            chart-labels="DynamicLabels">
+          </canvas>
+        </div>
+      </div>
+
+
+
+
+      <div class="card">
+        <div class="item item-divider">
+          Mixed Type Chart
+        </div>
+        <div class="item item-text-wrap">
+          <canvas id="base" class="chart-bar" chart-data="MixedTypeData" chart-labels="MixedTypeLabels"
+            chart-colors="MixedTypeColors" chart-dataset-override="MixedTypeDatasetOverride">
+          </canvas>
+        </div>
+      </div>
+
+    </ion-content>
+  </ion-pane>
+</body>
+
+</html>
